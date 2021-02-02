@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Titel</h1>
+    </header>
+    <main>
+        <section class="content">
+            <article class="undertitel">
+                <h2>Undertitel</h2>
+            </article>
+            <div class="articles">
+                <section class="first">
+                    <article>
+                        <img src="https://placeimg.com/540/380/any" alt="">
+                        <h3>Article 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pretium odio ut lacinia sollicitudin. Maecenas lacinia leo et mollis sodales. Quisque eget ipsum quam.</p>
+                    </article>
+                </section>
+                <section class="second">
+                    <article>
+                        <img src="https://placeimg.com/540/380/any" alt="">
+                        <h3>Article 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pretium odio ut lacinia sollicitudin. Maecenas lacinia leo et mollis sodales. Quisque eget ipsum quam.</p>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>This is the footer</p>
+    </footer>
+    <script>
+        const overskrift = document.querySelector("h1");
+        console.log(overskrift.textContent);
+
+
+        const underoverskrift = document.querySelector("h2");
+        console.log(underoverskrift.textContent);
+
+        const artikeloverskrift = document.querySelector("h3");
+        console.log(artikeloverskrift.textContent);
+
+        const tekst = document.querySelector("p");
+        console.log(tekst);
+
+        const articles = document.querySelector(".articles");
+        console.log(articles.textContent);
+
+        const billede = document.querySelector("img");
+        console.log(billede);
+
+        const footer = document.querySelector("footer");
+        console.log(footer);
+
+    </script>
+</body>
+
+</html>
