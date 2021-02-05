@@ -1,0 +1,29 @@
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 1vw;
+}
+
+article {
+    border: 2px solid #ffbe7d;
+    border-radius: 15px;
+    padding: 0.7vw;
+    text-align: left;
+    line-height: 1vw;
+}
+
+body p {
+    line-height: 1vw;
+}
+
+body h1 {
+    margin-top: 3vw;
+    margin-left: 1vw;
+}
