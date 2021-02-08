@@ -27,6 +27,10 @@
             border-radius: 1em;
         }
 
+        .valgt {
+            background-color: red;
+        }
+
         button:hover {
             background-color: red;
         }
@@ -36,20 +40,20 @@
             justify-content: center;
             column-gap: 5px;
         }
-
     </style>
 
 </head>
-
-<body>
+<header>
+    <h1>Alle</h1>
     <nav>
         <button data-troende="alle" class="valgt">Alle</button>
         <button data-troende="ja">Troende</button>
         <button data-troende="nej">Ikke troende</button>
         <button data-troende="tvivler">Tvivler</button>
     </nav>
+</header>
 
-
+<body>
     <section id="liste"></section>
 
     <template>
@@ -82,8 +86,10 @@
         // eventlistener knyttet til knapperne der vælger hvad for et filter der er aktivt
         function filtrerPersoner() {
             filter = this.dataset.troende; // sæt variablen "filter" til værdien af data-troende på den knap der er klikket på
-
+            document.querySelector(".valgt").classList.remove("valgt"); // fjern klassen valgt fra den der var valgt
+            this.classList.add("valgt") // marker den knap der er  klikket på
             visPersoner(); // kald funktionen visPersoner efter det nye filter er sat
+            header.textContent = this.textContent;
         }
 
         async function loadJSON() {
@@ -110,8 +116,5 @@
                 }
             })
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
