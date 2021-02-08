@@ -45,6 +45,7 @@
         header h1 {
             text-align: center;
         }
+
     </style>
 
 </head>
@@ -92,10 +93,10 @@
 
         // eventlistener knyttet til knapperne der vælger hvad for et filter der er aktivt
         function filtrerRetter() {
-            filter = this.dataset.kategori; // sæt variablen "filter" til værdien af data-troende på den knap der er klikket på
+            filter = this.dataset.kategori; // sæt variablen "filter" til værdien af data-kategori på den knap der er klikket på
             document.querySelector(".valgt").classList.remove("valgt"); // fjern klassen valgt fra den der var valgt
             this.classList.add("valgt") // marker den knap der er  klikket på
-            visRetter(); // kald funktionen visPersoner efter det nye filter er sat
+            visRetter(); // kald funktionen visRetter efter det nye filter er sat
             header.textContent = this.textContent;
         }
 
@@ -108,7 +109,7 @@
             visRetter();
         }
 
-        //funktion der viser personer i liste view
+        //funktion der viser retter i liste view
         function visRetter() {
             const dest = document.querySelector("#liste"); // container til articles med en ret
             const skabelon = document.querySelector("template").content; // select indhold af html skabelon (article)
@@ -125,5 +126,8 @@
                 }
             })
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
