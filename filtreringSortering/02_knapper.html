@@ -26,6 +26,16 @@
             border: 1px solid;
             border-radius: 1em;
         }
+
+        button:hover {
+            background-color: red;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            column-gap: 5px;
+        }
     </style>
 
 </head>
@@ -60,11 +70,20 @@
         }
         document.addEventListener("DOMContentLoaded", start)
         let personer;
-        let filter = "ja";
+        let filter = "alle";
 
         // første funktion der kaldes efter DOM er loaded
         function start() {
+            const filterKnapper = document.querySelectorAll("navn button");
+            filterKnapper.forEach(knap => knap.addEventListener("click", filtrerPersoner));
             loadJSON();
+        }
+
+        // eventlistener knyttet til knapperne der vælger hvad for et filter der er aktivt
+        function filtrerPersoner() {
+            filter = this.dataset.troende; // sæt variablen "filter" til værdien af data-troende på den knap der er klikket på
+
+            visPersoner(); // kald funktionen visPersoner efter det nye filter er sat
         }
 
         async function loadJSON() {
@@ -78,13 +97,12 @@
 
         //funktion der viser personer i liste view
         function visPersoner() {
-
             const dest = document.querySelector("#liste"); // container til articles med en person
             const skabelon = document.querySelector("template").content; // select indhold af html skabelon (article)
-
+            dest.textContent = ""; // ryd container inden ny loop
             personer.forEach(person => {
                 // loop igennem json (personer)
-                if (filter == person.troende) {
+                if (filter == person.troende || filter == "alle") {
                     const klon = skabelon.cloneNode(true);
                     klon.querySelector(".navn").textContent = person.fornavn + " " + person.efternavn;
                     klon.querySelector(".profil-billede").src = medieurl + person.billede;
