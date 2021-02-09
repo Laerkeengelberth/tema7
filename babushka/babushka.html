@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Babushka</title>
     <style>
         body {
             font-family: sans-serif;
@@ -45,7 +45,6 @@
         header h1 {
             text-align: center;
         }
-
     </style>
 
 </head>
@@ -122,12 +121,16 @@
                     klon.querySelector(".navn").textContent = ret.navn;
                     klon.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
                     klon.querySelector(".pris").textContent = `Pris: ${ret.pris},-`;
+                    // nyt
+                    klon.querySelector(".ret").addEventListener("click", () => visDetaljer(ret));
                     dest.appendChild(klon);
                 }
             })
         }
 
+        // nyt
+        function visDetaljer(hvem) {
+            location.href = `babushka_single.html?id=${hvem._id}`;
+        }
     </script>
-</body>
-
-</html>
+</body></html>
