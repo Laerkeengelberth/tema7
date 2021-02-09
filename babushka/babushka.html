@@ -28,7 +28,7 @@
 
         .ret {
             padding: 0.5em;
-            border: 1px solid;
+            border: 2px solid;
             border-radius: 1em;
             background-color: white;
             font-family: 'Roboto Slab', serif;
@@ -72,6 +72,22 @@
             font-size: 1.5rem;
             font-weight: 600;
         }
+
+        footer {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.3rem 5rem;
+
+        }
+
+        address {
+            font-family: 'Roboto Slab', serif;
+            font-size: 0.9rem;
+            font-weight: 300;
+            font-style: normal;
+        }
+
     </style>
 
 </head>
@@ -97,6 +113,20 @@
             <p class="pris"></p>
         </article>
     </template>
+
+    <footer>
+        <address>
+            <b>Adresse</b> <br>
+            Grønnegade 97<br>
+            Kbh K<br>
+        </address>
+        <address>
+            <b>Åbningstider</b> <br>
+            Mandag - fredag: 10.30 - 22.00<br>
+            Lørdag: 12.00 - 23.00<br>
+        </address>
+    </footer>
+
 
 
     <script>
@@ -159,5 +189,8 @@
         function visDetaljer(hvem) {
             location.href = `babushka_single.html?id=${hvem._id}`;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
