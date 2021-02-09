@@ -9,18 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #e8ded1
+            background-color: #e8ded1;
+            margin: 0;
+            padding: 0;
         }
 
         img {
-            width: 50%;
-            border-radius: 0.5em;
+            width: 45%;
         }
 
 
         .ret {
             display: flex;
-            border-radius: 0.5em;
             background-color: white;
             margin: 2em;
             padding: 3em;
@@ -37,17 +37,41 @@
 
         button {
             position: relative;
+            top: 15px;
             left: 30px;
             column-gap: 5px;
             padding: 0.5em;
             font-family: 'Roboto Slab', serif;
             font-size: 1rem;
             font-weight: 400;
+            border-radius: none;
+            border-style: none;
+
         }
 
         button:hover {
-            background-color: #f7a775;
-            border-radius: 0.2em;
+            background-color: #D92323;
+
+
+        }
+
+        footer {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.3rem 5rem;
+        }
+
+        address {
+            font-family: 'Roboto Slab', serif;
+            font-size: 0.9rem;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .pris {
+            font-weight: 500;
+            font-size: 1.3rem;
         }
     </style>
 </head>
@@ -64,6 +88,18 @@
         </div>
     </article>
 
+    <footer>
+        <address>
+            <b>Adresse</b> <br>
+            Grønnegade 97<br>
+            Kbh K<br>
+        </address>
+        <address>
+            <b>Åbningstider</b> <br>
+            Mandag - fredag: 10.30 - 22.00<br>
+            Lørdag: 12.00 - 23.00<br>
+        </address>
+    </footer>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
