@@ -4,18 +4,64 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>Babushka</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8ded1
+        }
+
+        img {
+            width: 50%;
+            border-radius: 0.5em;
+        }
+
+
+        .ret {
+            display: flex;
+            border-radius: 0.5em;
+            background-color: white;
+            margin: 2em;
+            padding: 3em;
+            font-family: 'Roboto Slab', serif;
+            font-size: 1rem;
+            font-weight: 350;
+
+        }
+
+        .oplysninger {
+            margin: 2em;
+
+        }
+
+        button {
+            position: relative;
+            left: 30px;
+            column-gap: 5px;
+            padding: 0.5em;
+            font-family: 'Roboto Slab', serif;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        button:hover {
+            background-color: #f7a775;
+            border-radius: 0.2em;
+        }
+    </style>
 </head>
 
 <body>
     <button>tilbage</button>
     <article class="ret">
         <img src="" alt="" class="billede">
-        <h2 class="navn"></h2>
-        <p class="kortbeskrivelse"></p>
-        <p class="langbeskrivelse"></p>
-        <p class="pris"></p>
+        <div class="oplysninger">
+            <h2 class="navn"></h2>
+            <p class="kortbeskrivelse"></p>
+            <p class="langbeskrivelse"></p>
+            <p class="pris"></p>
+        </div>
     </article>
 
     <script>
