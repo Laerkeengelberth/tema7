@@ -74,6 +74,14 @@
             font-weight: 500;
             font-size: 1.3rem;
         }
+
+        .oprindelsesregion {
+            border-bottom: solid 2px;
+            border-top: solid 2px;
+            width: 40%;
+            padding: 10px;
+        }
+
     </style>
 </head>
 
@@ -84,6 +92,7 @@
         <div class="oplysninger">
             <h2 class="navn"></h2>
             <p class="kortbeskrivelse"></p>
+            <p class="oprindelsesregion"></p>
             <p class="langbeskrivelse"></p>
             <p class="pris"></p>
         </div>
@@ -126,6 +135,7 @@
         function visRetter() {
             document.querySelector(".billede").src = medieurl + ret.billede;
             document.querySelector(".navn").textContent = ret.navn;
+            document.querySelector(".oprindelsesregion").textContent = `Oprindelsesregion: ${ret.oprindelsesregion}`;
             document.querySelector(".langbeskrivelse").textContent = ret.langbeskrivelse;
             document.querySelector(".pris").textContent = `Pris: ${ret.pris},-`;
 
@@ -135,5 +145,8 @@
         function tilbageTilMadGalleri() {
             history.back();
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
