@@ -116,7 +116,7 @@
 
         }
 
-        .image {
+        .logo {
             background-color: white;
         }
 
@@ -124,24 +124,47 @@
             font-weight: 500;
             font-size: 1.3rem;
         }
+
+        a {
+            position: relative;
+            text-align: right;
+            left: 57vw;
+            bottom: 6vw;
+            list-style-type: none;
+            text-decoration: none;
+            font-family: 'Roboto Slab', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: black;
+            padding: 25px 25px 25px;
+            border-right: 2.3px solid;
+            height: 2px;
+            padding-bottom: 0.8vw;
+            padding-top: 0.8vw;
+
+        }
     </style>
 
 </head>
 
 <body>
     <header>
-        <div class="image">
+        <div class="logo">
             <img src="logo_nyt-100.jpg" alt="">
         </div>
+        <a href="#">MENUKORT</a>
+        <a href="#">BOOK BORD</a>
+        <a href="#">OM</a>
+        <a href="#">KONTAKT</a>
         <h1>Menu</h1>
-        <nav>
-            <button data-kategori="alle" class="valgt">Alle retter</button>
-            <button data-kategori="forretter">Forretter</button>
-            <button data-kategori="hovedretter">Hovedretter</button>
-            <button data-kategori="desserter">Desserter</button>
-            <button data-kategori="drikkevarer">Drikkevarer</button>
-        </nav>
     </header>
+    <nav>
+        <button data-kategori="alle" class="valgt">Alle retter</button>
+        <button data-kategori="forretter">Forretter</button>
+        <button data-kategori="hovedretter">Hovedretter</button>
+        <button data-kategori="desserter">Desserter</button>
+        <button data-kategori="drikkevarer">Drikkevarer</button>
+    </nav>
     <section id="liste"></section>
 
     <template>
@@ -157,7 +180,7 @@
         <address>
             <b>Adresse</b> <br>
             Grønnegade 97<br>
-            Kbh K<br>
+            1234 København K<br>
         </address>
         <address>
             <b>Åbningstider</b> <br>
