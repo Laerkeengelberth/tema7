@@ -110,7 +110,7 @@
 
         header img {
             align-items: center;
-            width: 30%;
+            width: 20%;
             position: relative;
             left: 6vw;
 
@@ -128,7 +128,7 @@
         a {
             position: relative;
             text-align: right;
-            left: 24vw;
+            left: 33vw;
             right: 1vw;
             bottom: 6vw;
             list-style-type: none;
@@ -149,13 +149,13 @@
         @media (max-width: 600px) {
 
             header img {
-                width: 50%;
+                width: 40%;
 
             }
 
             .logo {
                 background-color: white;
-                height: 30vw;
+                height: 25vw;
 
             }
 
@@ -167,9 +167,18 @@
                 margin: 10px;
             }
 
+            button {
+                border-radius: 0;
+                border-color: rgba(255, 255, 255, 0);
+                background-color: white;
+                padding: 0.4em;
+                font-family: 'Roboto Slab', serif;
+                font-size: 0.96rem;
+                font-weight: 400;
+            }
+
 
         }
-
     </style>
 
 </head>
@@ -279,8 +288,5 @@
         function visDetaljer(hvem) {
             location.href = `babushka_single.html?id=${hvem._id}`;
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
